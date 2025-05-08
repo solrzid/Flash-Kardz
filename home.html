@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Kardz</title>
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="header">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Flash Kardz</h1>
+    <div class="nav-links">
+      <a href="#" onclick="openAboutModal()">About</a>
+      <a href="logIn.html">Log Out</a> 
+    </div>
+  </div>
+  
+  <div class="folder-creation">
+    <h3>Create a Folder</h3>
+    <input type="text" id="folder-name" placeholder="Folder name" />
+    <button onclick="createFolder()">Create Folder</button>
+  </div>
+  
+  <div class="container">
+    <div>
+      <h3>Select Folder</h3>
+      <select id="folder-select" onchange="renderFlashcards()">
+        <option value="" disabled selected>Select a folder</option>
+      </select>
+      <button onclick="openRenameFolderModal()">Rename Folder</button>
+      <button onclick="deleteFolder()">Delete Folder</button>
+    </div>
+
+    <div>
+      <h3>Add Flashcard to Selected Folder</h3>
+      <input type="text" id="new-question" placeholder="Enter the question" />
+      <input type="text" id="new-answer" placeholder="Enter the answer" />
+      <button onclick="addFlashcard()">Add Flashcard</button>
+    </div>
+
+    <div class="flashcards-list">
+      <h2>Your Flashcards</h2>
+      <div id="flashcardsList"></div>
+      <div class="navigation-buttons">
+        <button id="prevBtn" onclick="navigateFlashcard('prev')">Previous</button>
+        <button id="nextBtn" onclick="navigateFlashcard('next')">Next</button>
+      </div>
+    </div>
+  </div>
+ 
+
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <p id="modal-message">Edit Flashcard</p>
+    <div id="modal-input-container" style="display: none;">
+      <label for="modal-input-1">Enter Question:</label>
+      <input type="text" id="modal-input-1" placeholder="Enter question" />
+      
+      <label for="modal-input-2">Enter Answer:</label>
+      <input type="text" id="modal-input-2" placeholder="Enter answer" />
+    </div>
+    <div id="modal-buttons" style="display: none; margin-top: 20px;">
+      <button id="confirm-btn">Yes</button>
+      <button onclick="closeModal()">No</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="aboutModal" class="modal1">
+  <div class="modal-content1">
+    <h3 class="hAbout">About</h3>
+    <p id="aboutMessage">Flash Kardz is a simple and efficient flashcard web application designed to support effective learning and memory retention. It provides a clean, user-friendly interface that allows users to create, organize, and review flashcards with ease. Ideal for anyone looking to study more effectively, this tool focuses on simplicity and functionality without unnecessary distractions. It was developed out of a desire to make studying more accessible.<br /><br />
+    This application was developed by Mirasol Pastrana and Hana Zhalei Fajarito, with the goal of creating a focused, easy-to-use resource for learners.</p>
+    <button onclick="closeAboutModal()">Close</button>
+  </div>
+</div>
+
+
+
+<div id="renameFolderModal" class="modal">
+  <div class="modal-content">
+    <p>Rename Folder</p>
+    <div id="renameFolderInputContainer">
+      <label for="renameFolderInput">Enter New Folder Name:</label>
+      <input type="text" id="renameFolderInput" placeholder="New folder name" />
+    </div>
+    <div id="renameFolderButtons">
+      <button onclick="confirmRenameFolder()">Rename</button>
+      <button onclick="closeRenameFolderModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+  <script src="flashKardz.js"></script>
+</body>
+</html>

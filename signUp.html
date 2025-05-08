@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Kardz</title>
+    <link rel="stylesheet" href="styleSignUp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+    <div class="signup-container">
+        <form class="signup-form" onsubmit="validateSignUp(event)">
+            <h2 class="a1">Sign Up for <br /> Flashy Kardz</h2>
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">
+                    <i class="fa fa-eye" id="eye-icon"></i>
+                </span>
+            </div>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+            <p class="a3">Already have an account? <a href="logIn.html" class="sign-up">Log In</a></p>
+        </form>
+    </div>
+
+    
+<div id="popup-modal" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+      <p id="popup-message"></p>
+      <button onclick="closePopup()" class="popup-button">OK</button>
+    </div>
+  </div>
+  
+
+    <script src="logAndSign.js"></script>
+</body>
+</html>

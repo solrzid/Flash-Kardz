@@ -1,0 +1,335 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f2f2f2;
+    background-image: url("Flash Kardz.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    font-weight: extra-bold;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+ 
+  .header {
+    width: 100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start;
+    background-color: #5552fe; 
+
+  }
+  
+  .logo {
+    width: 75px;
+    height: 75px;
+   
+  }
+  
+  h1 {
+    background-color: #5552fe;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    font-size: 30px;
+    text-align: left; 
+  }
+
+
+  .nav-links {
+    margin-left: auto;
+    margin-right: 25px;
+    display: flex;
+    gap: 20px; 
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .folder-creation {
+    margin: 30px auto;
+    padding: 15px;
+    background-color: #5552fe;
+    color: white;
+    font-size: 24px;
+    bottom: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+  }
+
+  .container {
+    margin: 30px auto;
+    padding: 15px;
+    background-color: #5552fe;
+    color: white;
+    font-size: 24px;
+    bottom: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+  }
+
+  input, select {
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+    width: 80%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  button {
+    background-color: #fbc20a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  button:hover {
+    background-color: black;
+  }
+
+  
+  .flip-card {
+    display: inline-block;
+    width: 350px;
+    height: 250px;
+    perspective: 1000px;
+    
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-sizing: border-box;
+  }
+
+  .flip-card-front {
+    background-color: white;
+    color: black;
+    border: 10px solid #fbc20a;
+  }
+
+  .flip-card-back {
+    background-color: #fbc20a;
+    color: black;
+    transform: rotateY(180deg);
+    border: 10px solid #ccc;
+  }
+
+  .navigation-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigation-buttons button {
+    background-color: #fbc20a;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .navigation-buttons button:hover {
+    background-color: black;
+  }
+
+  .edit-delete-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .edit-delete-buttons button {
+    background-color: #fbc20a;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    position: relative; 
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  
+  .close-btn {
+    position: absolute; 
+    top: 10px; 
+    right: 17px; 
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close-btn:hover,
+  .close-btn:focus {
+    color: black;
+  }
+    
+  #modal-input-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    width: 100%; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
+  }
+  
+  #modal-input-container label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+    width: 100%; 
+  }
+  
+  #modal-input-container input {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; 
+    text-align: left; 
+  }
+
+  #modal-buttons {
+    margin-top: 20px;
+  }
+  
+  #modal-buttons button {
+    background-color: #fbc20a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: 0 10px;
+  }
+  
+  #modal-buttons button:hover {
+    background-color: #8054fb;
+  }
+
+  #modal-message {
+    font-size: 25px;
+    
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  #aboutModal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .modal-content1 {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px; 
+    max-height: 80%; 
+    overflow-y: auto; 
+    text-align: justify; 
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #aboutMessage {
+    font-size: 16px;
+    line-height: 1.6; 
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-indent: 30px;
+  }
+
+  #aboutMessage br + br + p {
+    text-indent: 30px; 
+  }
+
+h3{
+  margin-left: 20px;
+  font-size: 20px;
+}
